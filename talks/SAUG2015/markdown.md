@@ -2,15 +2,15 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-#remark
-[ri-mahrk]
-.footnote[Go directly to [project site](https://github.com/gnab/remark)]
+#Getting into Git
+for Custom Fiori Development
+.footnote[Nigel James [@njames](https://twitter.com/njames)]
 ---
-## What is it and why should I be using it?
+## What is Git and why should I be using it?
 ---
 layout: false
 .left-column[
-  ## What is it?
+  ## SAP Transport Managment
 ]
 .right-column[
   A simple, in-browser, Markdown-driven slideshow tool targeted at people who know their way around HTML and CSS, featuring:
