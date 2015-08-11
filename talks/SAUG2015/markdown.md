@@ -4,7 +4,7 @@ class: center, middle, inverse
 ---
 #Getting into Git
 for Custom Fiori Development
-.footnote[Nigel James [@njames](https://twitter.com/njames)]
+.footnote[Nigel James [@njames](https://twitter.com/njames) Square Cloud [@squarecloud](https://twitter.com/squarecloud)]
 ---
 ## What is Git and why should I be using it?
 ---
