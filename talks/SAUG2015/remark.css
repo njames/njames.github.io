@@ -1,12 +1,3 @@
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
-    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
-    <title>Remark</title>
-    <style>
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
       @import url(https://fonts.googleapis.com/css?family=Nova+Square);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
@@ -117,23 +108,3 @@
         float: right;
         padding-top: 1em;
       }
-    </style>
-  </head>
-  <body>
-
-    <script src="/js/remark-latest.min.js"></script>
-    <script>
-      var hljs = remark.highlighter.engine;
-    </script>
-    <script src="remark.language.js"></script>
-    <script>
-      var slideshow = remark.create({
-          highlightStyle: 'monokai',
-          highlightLanguage: 'remark',
-          sourceUrl: 'markdown.md',
-          ratio: '16:9'
-        }) ;
-    </script>
-
-  </body>
-</html>
