@@ -3,28 +3,37 @@ layout: true
 class: center, middle, inverse
 ---
 #Getting into Git
-for Custom Fiori Development
-.footnote[Nigel James [@njames](https://twitter.com/njames)]
+For Custom Fiori Development 
+
+SAUG 2015 :: Sydney, Australia :: Nigel James [@njames](https://twitter.com/njames)
 .footnote[Square Cloud [@squarecloud](https://twitter.com/squarecloud)]
 ---
-## What is Git and why should I be using it?
+ ## What is Git?
+
 --
+ ## Why should I be using it?
+
+--
+ ## How does it compare to SAP Transports?
+
+--
+ ## How do I use it?
 ---
 layout: false
 .left-column[
-  ## SAP Transport Managment
+  ## What is Git
 ]
 .right-column[
-  A simple, in-browser, Markdown-driven slideshow tool targeted at people who know their way around HTML and CSS, featuring:
---
+  A distributed version control system for :
+
 - Markdown formatting, with smart extensions
---
+
 - Presenter mode, with cloned slideshow view
---
+
 - Syntax highlighting, supporting a range of languages
---
+
 - Slide scaling, thus similar appearance on all devices / resolutions .red[*]
---
+
 - Touch support for smart phones and pads, i.e. swipe to navigate slides
   
 .footnote[.red[*] At least browsers try their best]
@@ -317,17 +326,19 @@ browser window.
 ---
 template: inverse
 
-## It's time to get started!
+## Finally...
 ---
 .left-column[
-  ## Getting started
+  ## Your next steps
 ]
 .right-column[
-Getting up and running is done in only a few steps:
+Books, Software, Video Lessons
 
-1. Visit the [project site](http://github.com/gnab/remark)
+1. The [Pro Git Book](https://progit.org/)
 
-2. Follow the steps in the Getting Started section
+2. Get an account at [Github](http://github.com)
+
+3. 
 
 For more information on using remark, please check out the [wiki](https://github.com/gnab/remark/wiki) pages.
 ]
@@ -335,6 +346,6 @@ For more information on using remark, please check out the [wiki](https://github
 name: last-page
 template: inverse
 
-## That's all folks (for now)!
+## And now, over to you for questions ...
 
-Slideshow created using [remark](http://github.com/gnab/remark).
+.footnote[Slideshow created using [remark](http://github.com/gnab/remark).]
