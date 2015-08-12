@@ -4,7 +4,8 @@ class: center, middle, inverse
 ---
 #Getting into Git
 for Custom Fiori Development
-.footnote[Nigel James [@njames](https://twitter.com/njames) Square Cloud [@squarecloud](https://twitter.com/squarecloud)]
+.footnote[Nigel James [@njames](https://twitter.com/njames)]
+.footnote[Square Cloud [@squarecloud](https://twitter.com/squarecloud)]
 ---
 ## What is Git and why should I be using it?
 --
@@ -25,7 +26,7 @@ layout: false
 - Slide scaling, thus similar appearance on all devices / resolutions .red[*]
 --
 - Touch support for smart phones and pads, i.e. swipe to navigate slides
-
+  
 .footnote[.red[*] At least browsers try their best]
 ]
 ---
