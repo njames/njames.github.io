@@ -6,37 +6,48 @@ class: center, middle, inverse
 For Custom Fiori Development 
 
 SAUG 2015 :: Sydney, Australia :: Nigel James [@njames](https://twitter.com/njames)
+
 .footnote[Square Cloud [@squarecloud](https://twitter.com/squarecloud)]
+
 ---
- ## What is Git?
+ # What? Why? How? <br/> <br/> Where? When? Who?
+
+---
+ ## _What_ is Git?
 
 --
- ## Why should I be using it?
+ ## _Why_ should my team.red[*] be using it?
 
 --
- ## How does it compare to SAP Transports?
+ ## _How_ does it compare to SAP Transports?
 
 --
- ## How do I use it?
+ ## _How_ do I use it?
+
+--
+ ## _When_ do I use it?
+
+--
+ ## _Who_ should use it?
+
+.footnote[Yes, even your team of one!]
+
 ---
 layout: false
 .left-column[
-  ## What is Git
+  ## What is Git?
 ]
 .right-column[
-  A distributed version control system for :
+  A distributed version control system for recording changes in (not only) coding artifacts:
 
-- Markdown formatting, with smart extensions
+- _Distributed_: Not one central server.red[*] 
 
-- Presenter mode, with cloned slideshow view
+- _Version_: Creates versions and branches with ease
 
-- Syntax highlighting, supporting a range of languages
+- _Control_: Remove the 'henny penny'
 
-- Slide scaling, thus similar appearance on all devices / resolutions .red[*]
-
-- Touch support for smart phones and pads, i.e. swipe to navigate slides
   
-.footnote[.red[*] At least browsers try their best]
+.footnote[.red[*] We all seem to use [Github](http://github.com) though]
 ]
 ---
 .left-column[
@@ -44,24 +55,37 @@ layout: false
   ## Why use it?
 ]
 .right-column[
-If your ideal slideshow creation workflow contains any of the following steps:
+In an interative devlopment process you can 
 
-- Just write what's on your mind
+- Start
 
-- Do some basic styling
+- Make some changes
 
-- Easily collaborate with others
+- Test them and roll them back
 
-- Share with and show to everyone
+- Easily deploy to production in a continuous manner.
 
-Then remark might be perfect for your next.red[*] slideshow!
+- This an another bullet point to prove this
 
-.footnote[.red[*] You probably want to convert existing slideshows as well]
+
 ]
 ---
 .left-column[
   ## What is it?
   ## Why use it?
+]
+.right-column[
+As the slideshow is expressed using Markdown, you may:
+
+- Focus on the content, expressing yourself in next to plain text not worrying what flashy graphics and disturbing effects to put where
+
+
+]
+---
+.left-column[
+  ## What is it?
+  ## Why use it?
+
 ]
 .right-column[
 As the slideshow is expressed using Markdown, you may:
@@ -82,6 +106,8 @@ As the slideshow is contained in a plain file, you may:
 
 - Easily collaborate with others, keeping track of changes using your favourite SCM tool, like Git or Mercurial
 ]
+
+
 ---
 template: inverse
 
@@ -338,9 +364,10 @@ Books, Software, Video Lessons
 
 2. Get an account at [Github](http://github.com)
 
-3. 
+3. Intro to Git [Sitepoint](https://www.sitepoint.com/premium/courses/introduction-to-git-2902)
 
-For more information on using remark, please check out the [wiki](https://github.com/gnab/remark/wiki) pages.
+4. Git me some version control [Laracasts](https://laracasts.com/series/git-me-some-version-control)
+
 ]
 ---
 name: last-page
