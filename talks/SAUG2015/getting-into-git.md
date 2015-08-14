@@ -10,32 +10,44 @@ SAUG 2015 :: Sydney, Australia :: Nigel James [@njames](https://twitter.com/njam
 .footnote[Square Cloud [@squarecloud](https://twitter.com/squarecloud)]
 
 ---
- # What? Why? How? <br/> <br/> Where? When? Who?
+# Where? Who? When? <br/> <br/> What? Why? How? 
 
 ---
- ## _What_ is Git?
+
+ ## __Where__ do I use Git?
 
 --
- ## _Why_ should my team.red[*] be using it?
+
+ ## __Who__ should use Git? 
 
 --
- ## _How_ does it compare to SAP Transports?
+
+ ## __When__ do I use Git? 
 
 --
- ## _How_ do I use it?
+
+ ## __What__ is Git?
 
 --
- ## _When_ do I use it?
+
+ ## __Why__ should my team.red[*] be using Git? 
 
 --
- ## _Who_ should use it?
 
-.footnote[Yes, even your team of one!]
+ ## __How__ does it compare to SAP Transport Management System?
+
+--
+
+ ## __How__ do I use Git? 
+
+
+.footnote[.red[*] Yes, even your team of one!]
 
 ---
 layout: false
 .left-column[
   ## What is Git?
+
 ]
 .right-column[
   A distributed version control system for recording changes in (not only) coding artifacts:
@@ -46,313 +58,314 @@ layout: false
 
 - _Control_: Remove the 'henny penny'
 
+
   
 .footnote[.red[*] We all seem to use [Github](http://github.com) though]
 ]
+
+???
+A test of the presenter notes
 ---
 .left-column[
-  ## What is it?
-  ## Why use it?
+  ## What is Git?
+
+  ## Why use Git?
+
 ]
 .right-column[
 In an interative devlopment process you can 
 
-- Start
+- Start and create some files
 
-- Make some changes
-
-- Test them and roll them back
+- Test them, change them and roll them back
 
 - Easily deploy to production in a continuous manner.
 
-- This an another bullet point to prove this
+- Make life easier 
 
+```bash
+04:43:40 {master} /var/www/njames.github.io$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
 
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  
+  modified:   talks/SAUG2015/getting-into-git.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+04:47:21 {master} /var/www/njames.github.io$ git add -A
+04:47:33 {master} /var/www/njames.github.io$ git commit -m 'Update slide 10 with git example'
+04:47:37 {master} /var/www/njames.github.io$ git push
+Counting objects: 9, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.00 KiB | 0 bytes/s, done.
+Total 5 (delta 4), reused 0 (delta 0)
+To git@njames.github.com:njames/njames.github.io.git
+   af23eea..eb5fdc7  master -> master
+```
 ]
+
 ---
 .left-column[
-  ## What is it?
-  ## Why use it?
+  ## What is Git?
+
+  ## Why use Git?
+
+  ## How does it compare to STMS?
 ]
 .right-column[
-As the slideshow is expressed using Markdown, you may:
 
-- Focus on the content, expressing yourself in next to plain text not worrying what flashy graphics and disturbing effects to put where
+STMS is a central based system
 
+- You take a lock on an object
+
+- You make your changes on the server
+
+- You release the transport
+
+- It is now available for others to change
+
+Git is distributed
+
+- Everyone can work on the same file 
+
+- Everyone works on their own local copy
+
+- Only when you push do you merge the code
 
 ]
----
-.left-column[
-  ## What is it?
-  ## Why use it?
-
-]
-.right-column[
-As the slideshow is expressed using Markdown, you may:
-
-- Focus on the content, expressing yourself in next to plain text not worrying what flashy graphics and disturbing effects to put where
-
-As the slideshow is actually an HTML document, you may:
-
-- Display it in any decent browser
-
-- Style it using regular CSS, just like any other HTML content
-
-- Use it offline!
-
-As the slideshow is contained in a plain file, you may:
-
-- Store it wherever you like; on your computer, hosted from your Dropbox, hosted on Github Pages alongside the stuff you're presenting...
-
-- Easily collaborate with others, keeping track of changes using your favourite SCM tool, like Git or Mercurial
-]
-
 
 ---
 template: inverse
 
-## How does it work, then?
+## Enough allready, __How__ do I use Git?
+
 ---
 name: how
 
 .left-column[
-  ## How does it work?
-### - Markdown
+## How do I use Git?
+### - Simple workflow
 ]
 .right-column[
-A Markdown-formatted chunk of text is transformed into individual slides by JavaScript running in the browser:
+Git follows the 80/20 rule. You will mostly use the simple commands that we cover today.
+For more complicated stuff you can [Read the Fine Manual](#24)
 
-```remark
-# Slide 1
-This is slide 1
+- __init__ialise a new project from scratch
+
+- __clone__ with a new copy of someone else's project
+
+Happily do some work...
+
+- check your __status__
+
+- __add__ your files to the staging area
+
+- __commit__ your changes to the revision system
+
+- __push__ to the server so others can access your code
+
+Rinse and Repeat
+
+Advanced git 
+
+- Branching and Merging
+- Deploying and Continuous Integration
+
+]
+---
+name: new-repo-on-git
+background-image: url(create-a-new-repo.png)
 
 ---
+.left-column[
+## git init
+]
+.right-column[
 
-# Slide 2
-This is slide 2
+From the command line 
+```bash
+mkdir poetry
+cd poetry
+git init
+
 ```
-
-.slides[
-  .first[
-  ### Slide 1
-  This is slide 1
-  ]
-  .second[
-  ### Slide 2
-  This is slide 2
-  ]
+This creates a .git directory that stores the repository locally
+```bash
+06:58:40 (master) /var/www/poetry$ ll 
+total 12
+drwxrwxr-x 3 nigeljames nigeljames 4096 Aug 14 18:58 ./
+drwxrwxr-x 3 nigeljames nigeljames 4096 Aug 14 18:58 ../
+drwxrwxr-x 7 nigeljames nigeljames 4096 Aug 14 18:58 .git/
+```
 ]
 
-Regular Markdown rules apply with only a single exception:
+---
+.left-column[
+## git clone
+]
+.right-column[
 
-  - A line containing three dashes constitutes a new slide
-  (not a horizontal rule, `&lt;hr /&gt;`)
+From the command line 
+```bash
+cd project-central
+git clone git@github.com:njames/poetry.git
 
-Have a look at the [Markdown website](http://daringfireball.net/projects/markdown/) if you're not familiar with Markdown formatting.
+```
+
+This will create a new folder called ```poetry```
+
+```bash
+6:33:14 /var/www$ git clone git@njames.github.com:njames/poetry.git
+Cloning into 'poetry'...
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (5/5), done.
+Checking connectivity... done.
+```
+
+You can also use https instead of ssh
+```bash
+cd project-central
+git clone https://github.com/njames/poetry.git
+
+```
+
+You may be asked for your git username and password
+
+]
+
+---
+.left-column[
+## git status
+]
+.right-column[
+
+From the command line 
+```bash
+06:36:11 (master) /var/www/poetry$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working directory clean
+```
 ]
 ---
 .left-column[
-  ## How does it work?
-  ### - Markdown
-  ### - Inside HTML
+## git add
 ]
 .right-column[
-A simple HTML document is needed for hosting the styles, Markdown and the generated slides themselves:
 
-```xml
-<!DOCTYPE html>
-<html>
-  <head>
-    <style type="text/css">
-      /* Slideshow styles */
-    </style>
-  </head>
-  <body>
-*    <textarea id="source">
-      <!-- Slideshow Markdown -->
-    &lt;/textarea&gt;
-*    <script src="remark.js">
-    </script>
-    <script>
-*      var slideshow = remark.create();
-    </script>
-  </body>
-</html>
+From the command line 
+```bash
+06:40:19 {master} /var/www/poetry$ git add -A
+06:40:25 {master} /var/www/poetry$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+  new file:   sonnet.md
 ```
-
-You may download remark to have your slideshow not depend on any online resources, or reference the [latest version](http://remarkjs.com/downloads/remark-latest.min.js) online directly.
 ]
+
+---
+.left-column[
+## git commit
+]
+.right-column[
+
+From the command line 
+```bash
+06:40:54 {master} /var/www/poetry$ git commit -m 'A new sonnet idea I am working on '
+[master 0540a7b] A new sonnet idea I am working on
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sonnet.md
+
+06:42:45 (master) /var/www/poetry$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+
+```
+]
+
+---
+.left-column[
+## git push
+]
+.right-column[
+
+From the command line 
+```bash
+06:43:06 (master) /var/www/poetry$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 330 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To git@njames.github.com:njames/poetry.git
+   7cb16d4..0540a7b  master -> master
+
+```
+]
+
+---
+.left-column[
+## git reflog
+]
+.right-column[
+
+From the command line 
+```bash
+06:46:08 (master) /var/www/poetry$ git reflog
+0540a7b HEAD@{0}: commit: A new sonnet idea I am working on
+7cb16d4 HEAD@{1}: clone: from git@njames.github.com:njames/poetry.git
+```
+]
+
+---
+.left-column[
+## aliases
+]
+.right-column[
+
+From the .bash_aliases 
+```bash
+# Git aliases
+alias g="git"
+alias gs="git status"
+alias gh="git --help"
+alias gp="git push"
+alias ga="git add ."
+alias gaa="git add -A"
+alias gl="git reflog"
+
+function gc { git commit -a -m "$*" ;} # great for gc my new commit  
+
+source ~/.git-prompt-coloured.sh
+
+```
+]
+
+
+
+
 ---
 template: inverse
 
-## Of course, Markdown can only go so far.
----
-.left-column[
-  ## Markdown extensions
-]
-.right-column[
-To help out with slide layout and formatting, a few Markdown extensions have been included:
-
-- Slide properties, for naming, styling and templating slides
-
-- Content classes, for styling specific content
-
-- Syntax highlighting, supporting a range of languages
-]
-
----
-.left-column[
-  ## Markdown extensions
-  ### - Slide properties
-]
-.right-column[
-Initial lines containing key-value pairs are extracted as slide properties:
-
-```remark
-name: agenda
-class: middle, center
-
-# Agenda
-
-The name of this slide is {{ name }}.
-```
-
-Slide properties serve multiple purposes:
-
-* Naming and styling slides using properties `name` and `class`
-
-* Using slides as templates using properties `template` and `layout`
-
-* Expansion of `{{ property }}` expressions to property values
-
-See the [complete list](https://github.com/gnab/remark/wiki/Markdown#slide-properties) of slide properties.
-]
----
-.left-column[
-  ## Markdown extensions
-  ### - Slide properties
-  ### - Content classes
-]
-.right-column[
-Any occurences of one or more dotted CSS class names followed by square brackets are replaced with the contents of the brackets with the specified classes applied:
-
-```remark
-.footnote[.red.bold[*] Important footnote]
-```
-
-Resulting HTML extract:
-
-```xml
-<span class="footnote">
-  <span class="red bold">*</span> Important footnote
-</span>
-```
-]
----
-.left-column[
-  ## Markdown extensions
-  ### - Slide properties
-  ### - Content classes
-  ### - Syntax Highlighting
-]
-.right-column[
-Code blocks can be syntax highlighted by specifying a language from the set of [supported languages](https://github.com/gnab/remark/wiki/Configuration#highlighting).
-
-Using [GFM](http://github.github.com/github-flavored-markdown/) fenced code blocks you can easily specify highlighting language:
-
-.pull-left[
-
-<pre><code>```javascript
-function add(a, b)
-  return a + b
-end
-```</code></pre>
-]
-.pull-right[
-
-<pre><code>```ruby
-def add(a, b)
-  a + b
-end
-```</code></pre>
-]
-
-A number of highlighting [styles](https://github.com/gnab/remark/wiki/Configuration#highlighting) are available, including several well-known themes from different editors and IDEs.
-
-]
----
-.left-column[
-  ## Presenter mode
-]
-.right-column[
-To help out with giving presentations, a presenter mode comprising the
-following features is provided:
-
-- Display of slide notes for the current slide, to help you remember
-  key points
-
-- Display of upcoming slide, to let you know what's coming
-
-- Cloning of slideshow for viewing on extended display
-]
----
-.left-column[
-  ## Presenter mode
-  ### - Inline notes
-]
-.right-column[
-Just like three dashes separate slides,
-three question marks separate slide content from slide notes:
-
-```
-Slide 1 content
-
-*???
-
-Slide 1 notes
-
----
-
-Slide 2 content
-
-*???
-
-Slide 2 notes
-```
-
-Slide notes are also treated as Markdown, and will be converted in the
-same manner slide content is.
-
-Pressing __P__ will toggle presenter mode.
-]
-???
-Congratulations, you just toggled presenter mode!
-
-Now press __P__ to toggle it back off.
----
-.left-column[
-  ## Presenter mode
-  ### - Inline notes
-  ### - Cloned view
-]
-.right-column[
-Presenter mode of course makes no sense to the audience.
-
-Creating a cloned view of your slideshow lets you:
-
-- Move the cloned view to the extended display visible to the audience
-
-- Put the original slideshow in presenter mode
-
-- Navigate as usual, and the cloned view will automatically keep up with the original
-
-Pressing __C__ will open a cloned view of the current slideshow in a new
-browser window.
-]
+# And now for my next trick ...
 ---
 template: inverse
 
-## Finally...
+# Finally...
 ---
 .left-column[
   ## Your next steps
@@ -368,11 +381,14 @@ Books, Software, Video Lessons
 
 4. Git me some version control [Laracasts](https://laracasts.com/series/git-me-some-version-control)
 
+5. A review of different [Version Control Systems](http://www.smashingmagazine.com/2008/09/the-top-7-open-source-version-control-systems/)
+
+6. Graham Robinsons [ABAP Deployment System](http://scn.sap.com/community/ui-technology/blog/2015/05/24/sapui5-deployer-project)
 ]
 ---
 name: last-page
 template: inverse
 
-## And now, over to you for questions ...
+# And now, over to you for questions ...
 
 .footnote[Slideshow created using [remark](http://github.com/gnab/remark).]
