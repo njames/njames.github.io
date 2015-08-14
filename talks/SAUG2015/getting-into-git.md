@@ -141,7 +141,7 @@ Git is distributed
 ---
 template: inverse
 
-## Enough allready, __How__ do I use Git?
+## Enough already, __How__ do I use Git?
 
 ---
 name: how
