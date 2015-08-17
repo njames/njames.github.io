@@ -1,4 +1,4 @@
-background-image: url(SAUGlogo.jpg)
+background-image: url(first-screen.png)
 
 ---
 name: inverse
