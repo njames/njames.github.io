@@ -1,3 +1,6 @@
+background-image: url(SAUGlogo.jpg)
+
+---
 name: inverse
 layout: true
 class: center, middle, inverse
@@ -389,6 +392,6 @@ Books, Software, Video Lessons
 name: last-page
 template: inverse
 
-# And now, over to you for questions ...
+# Over to you for questions ...
 
 .footnote[Slideshow created using [remark](http://github.com/gnab/remark).]
