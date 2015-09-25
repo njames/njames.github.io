@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/js/reveal.js/css/reveal.css"/>
     <style type="text/css">code{white-space: pre;}</style>
-    <link rel="stylesheet" href="/js/reveal.js/css/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="/js/reveal.js/css/theme/black.css" id="theme">
     <link rel="stylesheet" media="print" href="/js/reveal.js/css/print/pdf.css" />
     <!--[if lt IE 9]>
     <script src="/js/reveal.js/lib/js/html5shiv.js"></script>
@@ -18,8 +18,7 @@
   <body>
     <div class="reveal">
       <div class="slides">
-      <section>
-        
+  
         <section data-background="greenhouse.jpg" id="sap-fiori-lessons-from-the-greenhouse" class="titleslide slide level1">
           <h1>SAP Fiori: Lessons from the Greenhouse</h1>
         </section>
@@ -41,30 +40,52 @@
         <section id="tooling" data-background="tools.jpg">
           <h1>Tooling</h1>
         </section>
+
+        <section id="source" data-background="source.jpg">
+          <h1>Source</h1>
+        </section>
       
+        <section id="deploy" data-background="deploy.jpg">
+          <h1>Deploy</h1>
+        </section>
+
+        <section id="minify" data-background="minify.jpg">
+          <h1>Minify</h1>
+        </section>
+
+        <section id="test" data-background="test.jpg">
+        </section>
+
+        <section id="grunt" data-background="grunt.jpg">
+        </section>
+
+
+
+      <section>      
       </section>
   </div>
 </div>
-<script src="/js/reveal.js/lib/js/head.min.js"></script>
-<script src="/js/reveal.js/js/reveal.js"></script>
-<script>
-// Full list of configuration options available here:
-// https://github.com/hakimel/reveal.js#configuration
-Reveal.initialize({
-controls: true,
-progress: true,
-history: true,
-center: true,
-theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-// Optional libraries used to extend on reveal.js
-dependencies: [
-{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-{ src: '/js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-{ src: '/js/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
-//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-]});
-</script>
+  
+  <script src="/js/reveal.js/lib/js/head.min.js"></script>
+  <script src="/js/reveal.js/js/reveal.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+    // Optional libraries used to extend on reveal.js
+    dependencies: [
+    { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: '/js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: '/js/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+    //          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+    //          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]});
+  </script>
 </body>
 </html>
