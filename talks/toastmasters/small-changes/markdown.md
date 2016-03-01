@@ -19,6 +19,16 @@
 
 ---
 
+<!-- .slide: data-background="#999" -->
+#Gray
+
+---
+
+<!-- .slide: data-background="#378B2E" -->
+#Pray
+
+---
+
 <!-- .slide: data-background="#4C119E" -->
 #Grate
 
@@ -74,7 +84,7 @@
 ---
 
 <!-- .slide: data-background="#E8D205" -->
-#So that leaves me to ask just one thing ...
+##So that leaves me to ask just one thing ...
 
 ---
 
