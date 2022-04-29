@@ -1,0 +1,16 @@
+{
+    "name": "njames/njames",
+    "description": "Website for Nigel James using Jigsaw SSG",
+    "type": "gh-pages",
+    "require": {
+        "tightenco/jigsaw": "dev-main"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nigel James",
+            "email": "nigel.james@squarecloud.com.au"
+        }
+    ],
+    "minimum-stability": "dev"
+}
